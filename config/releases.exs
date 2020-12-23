@@ -25,4 +25,6 @@ config :trello_tasker, TrelloTaskerWeb.Endpoint,
     transport_options: [socket_opts: [:inet6]]
   ],
   secret_key_base: secret_key_base
+  check_origin: false
+
      config :trello_tasker, TrelloTaskerWeb.Endpoint, server: true
