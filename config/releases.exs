@@ -24,7 +24,7 @@ config :trello_tasker, TrelloTaskerWeb.Endpoint,
     port: String.to_integer(System.get_env("PORT") || "4000"),
     transport_options: [socket_opts: [:inet6]]
   ],
-  secret_key_base: secret_key_base
+  secret_key_base: secret_key_base,
   check_origin: false
 
-     config :trello_tasker, TrelloTaskerWeb.Endpoint, server: true
+    config :trello_tasker, TrelloTaskerWeb.Endpoint, server: true
