@@ -44,6 +44,10 @@ section.card-info {
                 i {
                     font-size: 20px;
                     color: $detail-color-4;
+
+                    &.is-late{
+                        color: $detail-color-2
+                    }
                 }
             }
         }

@@ -1,22 +1,25 @@
 <section class="container">
     <h1>Monitor your Trello Cards</h1>
 
-    <form action="" id="create-card">
-        <input type="text" placeholder="Please type a card number">
-        <button type="submit">Search</button>
+    <%= f = form_for @changeset, "#", id: "create-card", phx_submit: "create" %>
+        <%= text_input f, :path, placeholder: "Please type a card number", class: f.errors && f.errors[:path] && "error" %>
+        <%= error_tag f, :path %>
+        <%= submit "Search", phx_disable_with: "Searching..." %>
     </form>
 
     <div class="cards">
-        <a href="">
-            <img src="https://images.ctfassets.net/rz1oowkt5gyp/2CPS47tK9O01nOAXW9G4mb/a7b57e505cea51c5a4d272f27ec3987d/powerful-features.png" alt="">
+        <%= for card <- @cards do %>
+        <%= live_redirect to: Routes.card_info_path(@socket, :index, card.card_id) do %>
+            <img src="<%= card.image %>" alt="">
 
             <div>
-                <strong>Finish Live View class</strong>
+                <strong><%= card.name %></strong>
                 <p>
-                    Explain concepts and give examples of how live view flows
+                    <%= card.description %>
                 </p>
             </div>
             <i class="fa fa-caret-right"></i>
-        </a>
+         <% end %>
+        <% end %>
     </div>
 </section>

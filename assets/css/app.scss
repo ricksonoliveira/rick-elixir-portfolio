@@ -1,4 +1,6 @@
 /* This file is for your main application css. */
+@import "../node_modules/nprogress/nprogress.css";
+
 $bg-color: #fff;
 $detail-color: #ffe9ce;
 $detail-color-2: #4ec1bf;
@@ -9,10 +11,9 @@ $gradient-detail: linear-gradient(-45deg, $detail-color, $bg-color);
 @import "global";
 @import "card/index/index";
 @import "card/info/info";
-@import "../node_modules/nprogress/nprogress.css";
 
 /* LiveView specific classes for your customizations */
-/* .phx-no-feedback.invalid-feedback,
+.phx-no-feedback.invalid-feedback,
 .phx-no-feedback .invalid-feedback {
   display: none;
 }
@@ -29,7 +30,7 @@ $gradient-detail: linear-gradient(-45deg, $detail-color, $bg-color);
   pointer-events: none;
 }
 
-.phx-modal {
+/*.phx-modal {
   opacity: 1!important;
   position: fixed;
   z-index: 1;
@@ -66,7 +67,6 @@ $gradient-detail: linear-gradient(-45deg, $detail-color, $bg-color);
 
 
 /* Alerts and form errors */
-/*
 .alert {
   padding: 15px;
   margin-bottom: 20px;
@@ -74,9 +74,7 @@ $gradient-detail: linear-gradient(-45deg, $detail-color, $bg-color);
   border-radius: 4px;
 }
 .alert-info {
-  color: #31708f;
-  background-color: #d9edf7;
-  border-color: #bce8f1;
+  color: $detail-color-2;
 }
 .alert-warning {
   color: #8a6d3b;
@@ -84,9 +82,7 @@ $gradient-detail: linear-gradient(-45deg, $detail-color, $bg-color);
   border-color: #faebcc;
 }
 .alert-danger {
-  color: #a94442;
-  background-color: #f2dede;
-  border-color: #ebccd1;
+  color: $detail-color-4;
 }
 .alert p {
   margin-bottom: 0;
@@ -95,7 +91,8 @@ $gradient-detail: linear-gradient(-45deg, $detail-color, $bg-color);
   display: none;
 }
 .invalid-feedback {
-  color: #a94442;
-  display: block;
+  color: $detail-color-4;
+  position: absolute;
+  margin-top: 40px;
   margin: -1rem 0 2rem;
-} */
+}
