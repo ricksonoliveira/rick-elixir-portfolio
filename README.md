@@ -1,4 +1,11 @@
 # TrelloTasker
+## Learning Elixir and Phoenix Framework with Gustavo from ElxPro Community
+  Checkout the ElxPro community youtube channel: https://www.youtube.com/user/guuhsnt
+  Checkout the ElxPro community Telegram group and e-mail subscription: https://elxpro.com/elxcrew-org-yt-descr
+
+Please, feel free to visit the Aplication in production and my LinkedIn Page:
+  * Production Aplication: https://rick-elixir-portfolio.gigalixirapp.com/
+  * My LinkedIn: https://linkedin.com/in/rickson-oliveira
 
 To start your Phoenix server:
 
