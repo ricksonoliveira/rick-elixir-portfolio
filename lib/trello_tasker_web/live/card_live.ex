@@ -17,12 +17,7 @@ defmodule TrelloTaskerWeb.CardLive do
   end
 
   @impl true
-  def handle_event(
-    "create",
-    %{
-      "card" => card
-    },
-     socket) do
+  def handle_event("create", %{"card" => card}, socket) do
       changeset =
         %Ecto.Changeset{Card.changeset(%Card{}, card) | action: :insert }
 
